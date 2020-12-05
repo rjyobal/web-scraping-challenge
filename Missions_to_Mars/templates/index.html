@@ -7,6 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript">
+    var html = '<b>Bold</b>'
+    $('.anotherclass').append(html);
+  </script>
 </head>
 
 <body>
@@ -36,7 +40,7 @@
         </div>
         <div class="row">
           <h4>Mars Facts</h4>
-          {{listings.mars_facts}}
+          {{listings.mars_facts|safe}}
         </div>
       </div>      
     </div>
