@@ -3,6 +3,7 @@ from splinter import Browser
 from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
+import time
 
 #Lauch web browser robot
 def init_browser():
@@ -19,6 +20,7 @@ def scrape():
     #Scrape News
     url = "https://mars.nasa.gov/news/"
     browser.visit(url)
+    time.sleep(5)
     html = browser.html
     soup = BeautifulSoup(html, "html.parser")
     listings["news_title"] = soup.find('li', class_='slide').find('div',class_='content_title').text
